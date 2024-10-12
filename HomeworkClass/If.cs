@@ -37,42 +37,42 @@ namespace HomeworkClass
             {
                 if (humanCount <= smallTable)
                 {
-                    return "Вам подойдёт маленький столик:)";
+                    return "small";
                 }
                 else if (humanCount <= mediumTable)
                 {
-                    return "Вам подойдёт средний столик:)";
+                    return "medium";
                 }
                 else
                 {
-                    return "Вам подойдёт большой столик:)";
+                    return "big";
                 }
             }
             else
             {
-                return "К сожалению, но у нас нет столика для такого количества человек:(";
+                return "not";
             }
         }
-        public static string CalculateUserBonus(string clientName, int clientAge, int packageCount, decimal clientAmount)
+        public static bool CalculateUserBonus(string clientName, int clientAge, int packageCount, decimal clientAmount)
         {
             if (clientAge > 60 || (clientAmount >= 5000 && packageCount >= 4))
             {
-                return "Клиенту нужно предоставить скидку";
+                return true;
             }
             else
             {
-                return "Клиенту не надо предоставлять скидку";
+                return false;
             }
         }
-        public static string GetDeliveryType(double length, double width, double height, double weight, double deliveryDistance)
+        public static bool GetDeliveryType(double length, double width, double height, double weight, double deliveryDistance)
         {
             if ((length + width + height <= 150) && (length <= 100 && width <= 100 && height <= 100) && (weight <= 10) && (deliveryDistance >= 3 && deliveryDistance <= 10))
             {
-                return "Отправление является малогабаритным";
+                return true;
             }
             else
             {
-                return "Отправление не является малогабаритным";
+                return false;
             }
         }
     }
