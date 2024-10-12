@@ -12,19 +12,9 @@ namespace HomeworkClass
         {
             double result = 1;
 
-            if (power >= 0)
+            for (int i = 0; i < power; i++)
             {
-                for (int i = 0; i < power; i++)
-                {
-                    result *= number;
-                }
-            }
-            else
-            {
-                for (int i = 0; i < -power; i++)
-                {
-                    result /= number;
-                }
+                result *= number;
             }
 
             return result;
