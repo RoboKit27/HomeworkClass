@@ -9,6 +9,13 @@
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(200, "200,400,600,800")]
+        public void GetMultiplesNumbersTest(int number, string expected)
+        {
+            string actual = For.GetMultiplesNumbers(number);
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestCase(100, 8)]
         public void GetNumbersSquareTest(int number, int expected)
         {

@@ -19,14 +19,18 @@ namespace HomeworkClass
 
             return result;
         }
-        public static void GetMultiplesNumbers(int number)
+        public static string GetMultiplesNumbers(int number)
         {
             int end = 1000;
+            string result = "";
 
             for (int i = number; i < end; i += number)
             {
-                Console.WriteLine(i);
+                result += $"{i},";
             }
+
+            result = result.Remove(result.Length - 1);
+            return result;
         }
         public static int GetNumbersSquare(int number)
         {
