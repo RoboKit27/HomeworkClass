@@ -55,14 +55,8 @@ namespace HomeworkClass
         }
         public static bool CalculateUserBonus(string clientName, int clientAge, int packageCount, decimal clientAmount)
         {
-            if (clientAge > 60 || (clientAmount >= 5000 && packageCount >= 4))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            bool result = (clientAge > 60 || (clientAmount >= 5000 && packageCount >= 4));
+            return result;
         }
         public static bool GetDeliveryType(double length, double width, double height, double weight, double deliveryDistance)
         {
