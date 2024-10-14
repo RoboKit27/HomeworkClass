@@ -9,7 +9,7 @@
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(200, "200,400,600,800")]
+        [TestCase(200, "200 400 600 800 ")]
         public void GetMultiplesNumbersTest(int number, string expected)
         {
             string actual = For.GetMultiplesNumbers(number);

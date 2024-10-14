@@ -22,15 +22,14 @@ namespace HomeworkClass
         public static string GetMultiplesNumbers(int number)
         {
             int end = 1000;
-            string result = "";
+            StringBuilder result = new StringBuilder();
 
             for (int i = number; i < end; i += number)
             {
-                result += $"{i},";
+                result.Append($"{i} ");
             }
 
-            result = result.Remove(result.Length - 1);
-            return result;
+            return result.ToString();
         }
         public static int GetNumbersSquare(int number)
         {
